@@ -1056,7 +1056,6 @@ pub fn early_error(emitter: @diagnostic::Emitter, msg: &str) -> ! {
 
 pub fn list_metadata(sess: Session, path: &Path, out: @mut io::Writer) {
     metadata::loader::list_file_metadata(
-        sess,
         token::get_ident_interner(),
         session::sess_os_to_meta_os(sess.targ_cfg.os), path, out);
 }
